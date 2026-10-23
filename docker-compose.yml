@@ -1,0 +1,12 @@
+# Ishlab chiqish uchun MongoDB. Faqat lokal kompyuterdan ochiq (127.0.0.1).
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Yaqin · Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="login" class="login" hidden>
+    <form id="loginForm" class="card login-card">
+      <h1>Yaqin <span>admin</span></h1>
+      <label>Email <input type="email" name="email" required autocomplete="username" /></label>
+      <label>Parol <input type="password" name="password" required autocomplete="current-password" /></label>
+      <p id="loginError" class="error"></p>
+      <button class="btn primary" type="submit">Kirish</button>
+    </form>
+  </section>
+
+  <div id="app" class="shell" hidden>
+    <aside class="side">
+      <div class="brand">Yaqin <span>admin</span></div>
+      <nav id="nav">
+        <button data-tab="dashboard" class="active">Statistika</button>
+        <button data-tab="users">Foydalanuvchilar</button>
+        <button data-tab="reports">Shikoyatlar <b id="reportBadge" hidden></b></button>
+        <button data-tab="photos">Rasmlar</button>
+        <button data-tab="places">Joylar</button>
+        <button data-tab="audit">Audit log</button>
+      </nav>
+      <button id="logout" class="btn ghost">Chiqish</button>
+    </aside>
+    <main class="main">
+      <div id="toast" class="toast" hidden></div>
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
